@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="c9fb5159-86ec-4369-a0ce-ac0cc49746a6" name="Default Changelist" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="RPG" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectId" id="1YdFdx0qcfASLmFIhF2b1iwGRV5" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="Downloaded.Files.Path.Enabled" value="false" />
+    <property name="Repository.Attach.Annotations" value="false" />
+    <property name="Repository.Attach.JavaDocs" value="false" />
+    <property name="Repository.Attach.Sources" value="false" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="settings.editor.selected.configurable" value="Errors" />
+  </component>
+  <component name="RunManager">
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="RPG" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="StructureViewFactory">
+    <option name="ACTIVE_ACTIONS" value=",SHOW_PROPERTIES" />
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c9fb5159-86ec-4369-a0ce-ac0cc49746a6" name="Default Changelist" comment="" />
+      <created>1583264655772</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1583264655772</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state width="1877" height="650" key="GridCell.Tab.0.bottom" timestamp="1583986332667">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="650" key="GridCell.Tab.0.bottom/0.0.1920.1050@0.0.1920.1050" timestamp="1583986332667" />
+    <state width="1877" height="650" key="GridCell.Tab.0.center" timestamp="1583986332667">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="650" key="GridCell.Tab.0.center/0.0.1920.1050@0.0.1920.1050" timestamp="1583986332667" />
+    <state width="1877" height="650" key="GridCell.Tab.0.left" timestamp="1583986332667">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="650" key="GridCell.Tab.0.left/0.0.1920.1050@0.0.1920.1050" timestamp="1583986332667" />
+    <state width="1877" height="650" key="GridCell.Tab.0.right" timestamp="1583986332667">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state width="1877" height="650" key="GridCell.Tab.0.right/0.0.1920.1050@0.0.1920.1050" timestamp="1583986332667" />
+    <state x="703" y="152" key="SettingsEditor" timestamp="1583731065833">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="703" y="152" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1583731065833" />
+    <state x="664" y="418" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD" timestamp="1583276763928">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="664" y="418" key="com.intellij.jarRepository.RepositoryAttachDialog-DOWNLOAD/0.0.1920.1050@0.0.1920.1050" timestamp="1583276763928" />
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup" timestamp="1583715015079">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="623" y="227" width="672" height="678" key="search.everywhere.popup/0.0.1920.1050@0.0.1920.1050" timestamp="1583715015079" />
+  </component>
+</project>
