@@ -1,10 +1,11 @@
 package entities;
 
 public class Entity {
-    private String name;
+    String name;
     int maxHP;
     int currentHP;
     int strength;
+    int gold;
 
     public Entity(String name, int maxHP, int strength) {
         this.name = name;
@@ -19,19 +20,26 @@ public class Entity {
         if (currentHP > maxHP) currentHP = maxHP;
     }
 
-    /*
-    /** Sets the HP to the given amount. *
-    void setHP(int amount) {
-        currentHP = amount;
-        checkHP();
-    }
-    */
-
-    /** Modifies the HP by the given amount. */
+    /** Modifies the object's HP by the given amount. */
     public void modHP(int amount) {
         currentHP += amount;
         checkHP();
     }
+
+    public void setHP(int amount) {
+        currentHP = amount;
+        checkHP();
+    }
+
+    public int getMaxHP() { return maxHP; }
+
+    /** Modifies the object's max HP by the given amount. */
+    public void modMaxHP(int amount) { maxHP += amount; }
+
+    /** Modifies the object's strength by the given amount. */
+    public void modStrength(int amount) { strength += amount; }
+
+    public int getGold() { return gold; }
 
     public int getCurrentHP() { return currentHP; }
 

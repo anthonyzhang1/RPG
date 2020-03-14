@@ -1,8 +1,8 @@
 package entities;
 
 public class Player extends Entity {
-    private int XP = 0;
     private int level = 0;
+    private int XP = 0;
 
     public Player(String name, int maxHP, int strength) {
         super(name, maxHP, strength);
@@ -20,37 +20,61 @@ public class Player extends Entity {
                           HPRestoredFromRest, getCurrentHP());
     }
 
+    /** Gain gold based on the amount dropped by an enemy. */
+    public void gainGold(NPC enemy) {
+        this.modGold(enemy.getGold());
+    }
+
+    /** Modify player's gold by given amount. Result must be non-negative. */
+    public void modGold(int amount) {
+        this.gold += amount;
+        if (this.gold < 0) this.gold = 0;
+    }
+
     /** Gain XP based on the XP value of the enemy. */
     public void gainXP(NPC enemy) {
         this.modXP(enemy.getXP());
-        System.out.printf("You gained %d XP and now have %d XP.\n", enemy.getXP(), this.getXP());
     }
 
     /** Adds the specified amount of XP. */
-    public void modXP(int amount) { this.XP += amount; }
-    public int getXP() { return XP; }
+    private void modXP(int amount) { this.XP += amount; }
 
-    private static final int XP_FOR_LEVEL_UP = 10;
+    private int getXP() { return XP; }
+
+    private int getXPToLevelUp() { return 5 * (level + 1); }
 
     /** As long as the XP requirement for level up is met, level up. */
     public void calcLevelUp() {
         boolean leveledUp = false;
 
-        while (XP >= XP_FOR_LEVEL_UP) {
-            XP -= XP_FOR_LEVEL_UP;
+        while (XP >= getXPToLevelUp()) {
+            XP -= getXPToLevelUp();
             levelUp();
             leveledUp = true;
         }
+
         if (leveledUp) {
             System.out.printf("You leveled up! You are now level %d.\n", level);
-            System.out.printf("You now have %d XP.\n", XP);
+        } else {
+            System.out.printf("%d XP required for next level.\n", getXPToLevelUp() - XP);
         }
     }
 
-    /** Increase stats and level, and replenishes HP. */
+    /** Increase stats and level. */
     private void levelUp() {
+        double MaxHPIncreaseFromLevelUp = (maxHP * 0.05) + 1;
+        double StrengthIncreaseFromLevelUp = (strength * 0.05) + 1;
+
         level++;
-        maxHP += (maxHP * 0.03) + 1; // >3% growth rate
-        strength += (strength * 0.02) + 1; // >2% growth rate
+        maxHP += MaxHPIncreaseFromLevelUp;
+        strength += StrengthIncreaseFromLevelUp;
+    }
+
+    public void displayCharacterStats() {
+        System.out.printf("Name: %s\n", name);
+        System.out.printf("Level: %d | XP: %d / %d\n", level, XP, getXPToLevelUp());
+        System.out.printf("Gold: %d\n", gold);
+        System.out.printf("HP: %d / %d\n", currentHP, maxHP);
+        System.out.printf("Strength: %d\n\n", strength);
     }
 }

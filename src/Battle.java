@@ -49,6 +49,7 @@ public class Battle {
                 enemy.attack(player);
                 break;
             case RUN:
+                enemy.setHP(enemy.getMaxHP());
                 System.out.println("You flee from the battle.");
                 return RUN; // End combat
             default:
@@ -61,6 +62,7 @@ public class Battle {
     /** Reports if the player or the enemy is dead, and calculates XP gain. */
     private void finishBattle() {
         if (!player.isAlive()) {
+            enemy.setHP(enemy.getMaxHP());
             System.out.println("\nYou have been defeated.\n");
             return;
         }
@@ -68,10 +70,12 @@ public class Battle {
         if (!enemy.isAlive()) {
             System.out.printf("\n%s has been slain.\n", enemy.getName());
             player.gainXP(enemy);
+            player.gainGold(enemy);
+            System.out.printf("You gained %d XP and %d gold.\n", enemy.getXP(), enemy.getGold());
             player.calcLevelUp();
         }
 
-        System.out.println("You return to the field.");
+        System.out.println("\nYou return to the field.");
     }
 
     private static void printActions() {
