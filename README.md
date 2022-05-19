@@ -5,7 +5,7 @@ There is no real objective in this game, other than fighting stronger and strong
 #### There is no save functionality. Closing the console resets your progress: be careful! ####
 
 Leveling up by fighting weaker enemies is a necessity in this game. You can refight previously slain enemies with `R`.\
-HP is not restored after battle, but you can restore 10% of your lost HP with `W` outside of battle.\
+HP is not restored after battle, but you can restore it with `W`.\
 There is a shop to purchase stat boosts with gold! You can enter the shop with `S`.
 
 If you want, you can skip the grind by editing the enemies' stats in `src/Main.java` so that they will drop a ridiculous amount of XP.
