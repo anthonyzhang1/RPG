@@ -1,7 +1,7 @@
 package entities;
 
 public class NPC extends Entity {
-    private int XP;
+    private final int XP;
 
     public NPC(String name, int maxHP, int strength, int XP, int gold) {
         super(name, maxHP, strength);

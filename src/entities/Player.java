@@ -1,5 +1,7 @@
 package entities;
 
+import java.lang.Math;
+
 public class Player extends Entity {
     private int level = 0;
     private int XP = 0;
@@ -13,28 +15,24 @@ public class Player extends Entity {
         int HPRestoredFromRest;
 
         if (maxHP < 10) HPRestoredFromRest = 1;
-        else HPRestoredFromRest = (int) (maxHP * 0.1); // 10% of max HP
+        else HPRestoredFromRest = (int) Math.ceil(maxHP * 0.1); // 10% of max HP, rounded up
 
         this.modHP(HPRestoredFromRest);
-        System.out.printf("You restore %d HP while waiting, and now have %d HP.\n",
-                          HPRestoredFromRest, getCurrentHP());
+        System.out.printf("You restore %d HP while waiting, and now have %d / %d HP.\n",
+                          HPRestoredFromRest, currentHP, maxHP);
     }
 
     /** Gain gold based on the amount dropped by an enemy. */
-    public void gainGold(NPC enemy) {
-        this.modGold(enemy.getGold());
-    }
+    public void gainGold(NPC enemy) { this.modGold(enemy.getGold()); }
 
-    /** Modify player's gold by given amount. Result must be non-negative. */
+    /** Modify player's gold by given amount. The resulting gold will be non-negative. */
     public void modGold(int amount) {
         this.gold += amount;
         if (this.gold < 0) this.gold = 0;
     }
 
     /** Gain XP based on the XP value of the enemy. */
-    public void gainXP(NPC enemy) {
-        this.modXP(enemy.getXP());
-    }
+    public void gainXP(NPC enemy) { this.modXP(enemy.getXP()); }
 
     /** Adds the specified amount of XP. */
     private void modXP(int amount) { this.XP += amount; }
@@ -53,11 +51,8 @@ public class Player extends Entity {
             leveledUp = true;
         }
 
-        if (leveledUp) {
-            System.out.printf("You leveled up! You are now level %d.\n", level);
-        } else {
-            System.out.printf("%d XP required for next level.\n", getXPToLevelUp() - XP);
-        }
+        if (leveledUp) System.out.printf("You leveled up! You are now level %d.\n", level);
+        else System.out.printf("%d XP required for next level.\n", getXPToLevelUp() - XP);
     }
 
     /** Increase stats and level. */

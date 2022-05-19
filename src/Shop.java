@@ -59,6 +59,7 @@ public class Shop {
             } else if (selectedItem.equals(strengthIncrease)) {
                 player.modStrength(quantity);
             }
+
             player.modGold(-cost);
             break;
         }

@@ -2,9 +2,13 @@ import java.util.Scanner;
 import entities.*;
 
 public class Battle {
-    private Scanner reader;
-    private Player player;
-    private NPC enemy;
+    private final Scanner reader;
+    private final Player player;
+    private final NPC enemy;
+
+    private static final String ATTACK = "F";
+    private static final String HELP = "H";
+    private static final String RUN = "R";
 
     public Battle(Scanner reader, Player player, NPC enemy) {
         this.reader = reader;
@@ -12,19 +16,14 @@ public class Battle {
         this.enemy = enemy;
     }
 
-    private static final String ATTACK = "F";
-    private static final String HELP = "H";
-    private static final String RUN = "R";
-    private static final String QUIT = "Q";
-
     public void beginBattle() {
         System.out.printf("You have engaged in combat with %s!\n\n", enemy.getName());
         printActions();
 
         // Combat occurs as long as both parties are alive, or the player flees.
         while (bothAreAlive()) {
-            if (battle().equals(RUN)) break; // If player chooses flee
-        } // end while
+            if (battle().equals(RUN)) break;
+        }
 
         finishBattle();
     }
@@ -37,23 +36,17 @@ public class Battle {
         String action = reader.nextLine().toUpperCase();
 
         switch (action) {
-            case QUIT:
-                System.out.println("Exiting.");
-                System.exit(0);
-                break;
-            case HELP:
-                printActions();
-                break;
-            case ATTACK:
+            case HELP -> printActions();
+            case ATTACK -> {
                 player.attack(enemy);
                 enemy.attack(player);
-                break;
-            case RUN:
+            }
+            case RUN -> {
                 enemy.setHP(enemy.getMaxHP());
                 System.out.println("You flee from the battle.");
                 return RUN; // End combat
-            default:
-                System.out.println("Unrecognized command!");
+            }
+            default -> System.out.println("Unrecognized command.");
         }
 
         return "";
@@ -82,7 +75,6 @@ public class Battle {
         System.out.println("== Battle Actions ==");
         System.out.println("'H' = List Actions");
         System.out.println("'F' = Attack");
-        System.out.println("'R' = Run");
-        System.out.println("'Q' = Quit Game\n");
+        System.out.println("'R' = Run\n");
     }
 }
