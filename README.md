@@ -1,5 +1,5 @@
 # A Text-Based RPG written in Java
-A text-based RPG I made in my free time during my second year of college. It's pretty barebones, but it's nice to look back at.\
+A text-based RPG I made in my free time during my second year of college. It's pretty barebones, but it's nice to look back at.
 There is no real objective in this game, other than fighting stronger and stronger enemies, and watching your stats grow.
 
 #### There is no save functionality. Closing the console resets your progress: be careful! ####
