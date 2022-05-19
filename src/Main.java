@@ -19,7 +19,7 @@ public class Main {
 
     public static void main(String[] args) {
         if (isNewGame) {
-            System.out.print("What shall be your name? ");
+            System.out.print("What will your character be named? ");
             String name = reader.nextLine();
             player = new Player(name, 5, 1);
 

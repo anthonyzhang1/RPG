@@ -11,7 +11,7 @@ There is a shop to purchase stat boosts with gold! You can enter the shop with `
 If you want, you can skip the grind by editing the enemies' stats in `src/Main.java` so that they will drop a ridiculous amount of XP.
 
 # Build and Run Instructions
-I used IntelliJ to build this program. Build the project first, then run `src/Main.java`.
+I used IntelliJ to build this program. Build the project, then run `src/Main.java`.
 
 # Screenshots of the Game
 Fighting a rat and displaying your character's stats:
