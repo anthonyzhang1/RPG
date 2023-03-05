@@ -1,23 +1,18 @@
-# A Text-Based RPG written in Java
-A text-based RPG I made in my free time during my second year of college. It's pretty barebones, but it's nice to look back at.
-There is no real objective in this game, other than fighting stronger and stronger enemies, and watching your stats grow.
+# Text-Based RPG
+A text-based RPG (role-playing game) created in March 2020. The game is coded entirely in Java. \
+There is little content and no story -- the game is barely a game. All there is to do is to fight increasingly strong enemies and watch your stats grow.
 
 #### There is no save functionality. Closing the console resets your progress: be careful! ####
 
-Leveling up by fighting weaker enemies is a necessity in this game. You can refight previously slain enemies with `R`.\
-HP is not automatically replenished after battle. You can restore it outside of battle with `W`.\
-There is a shop to purchase stat boosts with gold, which you can enter with `S`.
+## Gameplay
+Enemies drop experience points (XP) and money (gold), both of which are used to grow your stats. \
+Once you have accrued enough experience points, you will level up and enjoy an increase in stats. \
+Gold is used in the store to purchase stat upgrades. You can visit the store with `S`.
 
-If you want, you can skip the grind by editing the enemies' stats in `src/Main.java` so that they will drop a ridiculous amount of XP.
+Enter `W` to restore health points (HP) when out of combat. \
+If the current enemy is too hard to beat, enter `R` to go back to fighting the easiest enemies and accrue more XP and gold.
+
+If you want, you can edit the enemies' stats and drops in `src/Main.java`.
 
 # Build and Run Instructions
-I used IntelliJ to build this program. Build the project, then run `src/Main.java`.
-
-# Screenshots of the Game
-Fighting a rat and displaying your character's stats:
-
-![combat and character overview screen](https://github.com/anthonyzhang1/Text-Based-RPG/blob/master/.github/combat-and-character-overview.png)
-
-Fighting a goblin and entering the shop:
-
-![combat and shop screen](https://github.com/anthonyzhang1/Text-Based-RPG/blob/master/.github/combat-and-shop.png)
+Build the project first, then run `src/Main.java`. I used IntelliJ for this.
